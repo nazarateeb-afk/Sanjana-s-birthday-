@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Sanjana 💗</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    min-height:100vh;
+    background:#f8f5f8;
+    font-family:Georgia,serif;
+    color:#4e3942;
+    overflow-x:hidden;
+}
+
+.app{
+    width:100%;
+    max-width:430px;
+    min-height:100vh;
+    margin:auto;
+    position:relative;
+    overflow:hidden;
+    background:#fff8fb;
+}
+
+/* ---------- PAGES ---------- */
+
+.page{
+    min-height:100vh;
+    width:100%;
+    padding:25px 22px;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    animation:pageIn .7s ease;
+}
+
+.page.active{
+    display:flex;
+}
+
+@keyframes pageIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ---------- TEXT ---------- */
+
+h1{
+    font-size:42px;
+    line-height:1.1;
+    margin:15px 0;
+}
+
+h2{
+    font-size:30px;
+    margin:12px 0;
+}
+
+.pink{
+    color:#e94d86;
+}
+
+p{
+    color:#967482;
+    font-size:15px;
+    line-height:1.7;
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn{
+    border:none;
+    padding:14px 27px;
+    border-radius:30px;
+    background:linear-gradient(
+        135deg,
+        #ff73a3,
+        #e7467e
+    );
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    margin-top:20px;
+    box-shadow:
+        0 10px 25px rgba(220,70,120,.25);
+    cursor:pointer;
+}
+
+.btn:active{
+    transform:scale(.96);
+}
+
+/* ---------- EMOJIS ---------- */
+
+.bigEmoji{
+    font-size:65px;
+    animation:float 2.5s infinite ease-in-out;
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+/* ---------- TOP DECORATION ---------- */
+
+.decor{
+    position:absolute;
+    top:20px;
+    left:0;
+    right:0;
+    font-size:27px;
+    letter-spacing:8px;
+}
+
+/* ---------- PHOTO ---------- */
+
+.photo{
+    width:245px;
+    height:310px;
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffd3e2,
+        #fff0f6
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:55px;
+
+    box-shadow:
+    0 18px 40px rgba(190,70,110,.18);
+}
+
+/* ---------- CARD ---------- */
+
+.card{
+    width:100%;
+    background:#fff;
+    border-radius:25px;
+    padding:27px 22px;
+
+    box-shadow:
+    0 15px 40px rgba(150,65,95,.12);
+}
+
+/* ---------- CAKE ---------- */
+
+.cakeBox{
+    width:100%;
+    padding:30px 10px;
+}
+
+.cake{
+    position:relative;
+    width:210px;
+    height:170px;
+    margin:auto;
+    cursor:pointer;
+}
+
+.cakeBody{
+    position:absolute;
+    bottom:10px;
+    left:5px;
+
+    width:200px;
+    height:100px;
+
+    background:
+    linear-gradient(
+        #ff7eaa,
+        #ec4e83
+    );
+
+    border-radius:
+    10px 10px 25px 25px;
+}
+
+.cakeTop{
+    position:absolute;
+    top:45px;
+    left:5px;
+
+    width:200px;
+    height:55px;
+
+    background:#fff0f5;
+
+    border-radius:50%;
+    border:3px solid #f36e9b;
+}
+
+.cream{
+    position:absolute;
+    top:68px;
+    left:5px;
+
+    width:200px;
+    height:50px;
+
+    background:white;
+
+    border-radius:
+    0 0 50% 50%;
+}
+
+.candle{
+    position:absolute;
+
+    top:0;
+    left:93px;
+
+    width:23px;
+    height:55px;
+
+    background:#ffb1c9;
+
+    border-radius:5px;
+    z-index:5;
+}
+
+.flame{
+    position:absolute;
+
+    top:-25px;
+    left:5px;
+
+    width:13px;
+    height:23px;
+
+    background:#ffb52f;
+
+    border-radius:
+    50% 50% 50% 0;
+
+    transform:rotate(-45deg);
+
+    box-shadow:
+    0 0 15px #ffb52f;
+}
+
+.cutLine{
+    display:none;
+
+    position:absolute;
+
+    width:160px;
+    height:5px;
+
+    background:#777;
+
+    transform:
+    rotate(-48deg);
+
+    left:25px;
+    top:80px;
+
+    z-index:10;
+}
+
+.cake.cut .cutLine{
+    display:block;
+}
+
+.cake.cut{
+    animation:shake .5s;
+}
+
+@keyframes shake{
+
+    25%{
+        transform:rotate(-5deg);
+    }
+
+    75%{
+        transform:rotate(5deg);
+    }
+
+}
+
+/* ---------- PROGRESS ---------- */
+
+.progress{
+    width:90%;
+    height:7px;
+
+    background:#f0ccd9;
+
+    border-radius:20px;
+
+    margin:20px auto;
+}
+
+.progressBar{
+    height:100%;
+    width:0%;
+
+    background:#ed568a;
+
+    border-radius:20px;
+
+    transition:1s;
+}
+
+/* ---------- WISHES ---------- */
+
+.wishNumber{
+    color:#e64e83;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.wishText{
+    font-size:21px;
+    color:#624653;
+    line-height:1.6;
+    margin-top:18px;
+}
+
+.dots{
+    margin-top:18px;
+}
+
+.dot{
+    display:inline-block;
+
+    width:8px;
+    height:8px;
+
+    background:#e6bdcd;
+
+    border-radius:50%;
+
+    margin:4px;
+}
+
+.dot.active{
+    width:22px;
+    border-radius:10px;
+    background:#e65387;
+}
+
+/* ---------- FINAL LETTER ---------- */
+
+.letter{
+    text-align:left;
+    max-height:65vh;
+    overflow-y:auto;
+}
+
+.letter h2{
+    text-align:center;
+}
+
+.letter p{
+    font-size:16px;
+    margin:13px 0;
+}
+
+.signature{
+    text-align:right;
+    color:#e64f84 !important;
+    font-weight:bold;
+}
+
+/* ---------- FLOATING HEARTS ---------- */
+
+.heart{
+    position:fixed;
+
+    bottom:-30px;
+
+    pointer-events:none;
+
+    color:#ed6b99;
+
+    animation:
+    rise 6s linear forwards;
+
+    z-index:50;
+}
+
+@keyframes rise{
+
+    to{
+        transform:
+        translateY(-110vh)
+        rotate(360deg);
+
+        opacity:0;
+    }
+
+}
+
+/* ---------- DARK MODE ---------- */
+
+.dark{
+    background:#17121a;
+    color:#eee;
+}
+
+.dark .app{
+    background:#17121a;
+}
+
+.dark .page{
+    background:#17121a;
+}
+
+.dark p{
+    color:#bca8b3;
+}
+
+.dark .card{
+    background:#251d27;
+}
+
+.dark .wishText{
+    color:#f1dce5;
+}
+
+.dark h1,
+.dark h2{
+    color:#f9e8ef;
+}
+
+.themeBtn{
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:#ffffffaa;
+
+    cursor:pointer;
+
+    z-index:100;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="app" id="app">
+
+<button class="themeBtn"
+onclick="toggleTheme()">
+🌙
+</button>
+
+
+<!-- ========================= -->
+<!-- PAGE 1 -->
+<!-- ========================= -->
+
+<section class="page active"
+id="page1">
+
+<div class="decor">
+🎀 💗 🎀
+</div>
+
+<div class="bigEmoji">
+🥺💗
+</div>
+
+<p>
+I made something special for you...
+</p>
+
+<h1>
+Happy Birthday
+<br>
+
+<span class="pink">
+Sanjana
+</span>
+
+🎀
+</h1>
+
+<p>
+A tiny surprise made with lots of love.
+</p>
+
+<button class="btn"
+onclick="goTo(2)">
+
+Open Your Surprise 💌
+
+</button>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- PAGE 2 -->
+<!-- ========================= -->
+
+<section class="page"
+id="page2">
+
+<div class="photo">
+📸
+</div>
+
+<h2>
+A little something
+<br>
+
+<span class="pink">
+just for you
+</span>
+💕
+
+</h2>
+
+<p>
+Today is all about you.
+<br>
+So let's make it a little special.
+</p>
+
+<button class="btn"
+onclick="goTo(3)">
+
+Continue ✨
+
+</button>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- PAGE 3 -->
+<!-- ========================= -->
+
+<section class="page"
+id="page3">
+
+<div class="bigEmoji">
+🎈✨
+</div>
+
+<h2>
+Ready, Sanjana?
+</h2>
+
+<p>
+The birthday celebration
+is about to begin...
+</p>
+
+<button class="btn"
+onclick="goTo(4)">
+
+Let's Celebrate 🎉
+
+</button>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- PAGE 4 CAKE -->
+<!-- ========================= -->
+
+<section class="page"
+id="page4">
+
+<div class="card">
+
+<h2>
+Cake Time 🎂
+</h2>
+
+<p>
+Tap the cake to cut it
+<br>
+and make a wish.
+</p>
+
+
+<div class="cakeBox">
+
+<div class="cake"
+id="cake"
+onclick="cutCake()">
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+<div class="cakeTop"></div>
+
+<div class="cream"></div>
+
+<div class="cakeBody"></div>
+
+<div class="cutLine"></div>
+
+</div>
+
+</div>
+
+
+<p id="cakeText">
+Tap the cake 🎂
+</p>
+
+
+<div class="progress">
+
+<div
+class="progressBar"
+id="progress">
+</div>
+
+</div>
+
+</div>
+
+
+<button
+class="btn"
+id="cakeButton"
+style="display:none"
+onclick="goTo(5)">
+
+See Your Wishes 💌
+
+</button>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- PAGE 5 WISHES -->
+<!-- ========================= -->
+
+<section class="page"
+id="page5">
+
+<div class="bigEmoji">
+💌
+</div>
+
+<h2>
+Birthday Wishes
+</h2>
+
+<div class="card">
+
+<div
+class="wishNumber"
+id="wishNumber">
+1 / 4
+</div>
+
+<div
+class="wishText"
+id="wishText">
+</div>
+
+<div
+class="dots"
+id="dots">
+</div>
+
+</div>
+
+<button
+class="btn"
+onclick="nextWish()"
+id="wishButton">
+
+Next Wish 💗
+
+</button>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- PAGE 6 -->
+<!-- ========================= -->
+
+<section class="page"
+id="page6">
+
+<div class="bigEmoji">
+🥹🎀
+</div>
+
+<h1>
+All Wishes
+<br>
+
+<span class="pink">
+Discovered!
+</span>
+</h1>
+
+<p>
+But I saved one last thing
+<br>
+just for you...
+</p>
+
+<button
+class="btn"
+onclick="goTo(7)">
+
+Open Final Message 💌
+
+</button>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- FINAL LETTER -->
+<!-- ========================= -->
+
+<section class="page"
+id="page7">
+
+<div class="card letter">
+
+<h2>
+Happy Birthday,
+<br>
+
+<span class="pink">
+Sanjana
+</span>
+
+💗
+</h2>
+
+
+<p>
+<b>
+happy birthday bhnuu 💗🎂
+</b>
+</p>
+
+
+<p>
+god give all the happiness
+to you in the world.
+</p>
+
+
+<p>
+I hope your day is filled with
+beautiful moments, endless smiles,
+and all the happiness you deserve.
+💕
+</p>
+
+
+<p>
+Keep smiling, keep shining
+and enjoy your special day.
+🎀✨
+</p>
+
+
+<p class="signature">
+With lots of love 💗
+</p>
+
+</div>
+
+
+<button
+class="btn"
+onclick="restart()">
+
+Replay From Beginning ↻
+
+</button>
+
+</section>
+
+
+</div>
+
+
+<script>
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+function goTo(number){
+
+    document
+    .querySelectorAll(".page")
+    .forEach(function(page){
+
+        page.classList.remove("active");
+
+    });
+
+
+    document
+    .getElementById("page"+number)
+    .classList.add("active");
+
+
+    burst(5);
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+let cakeCut=false;
+
+
+function cutCake(){
+
+    if(cakeCut){
+        return;
+    }
+
+    cakeCut=true;
+
+
+    document
+    .getElementById("cake")
+    .classList.add("cut");
+
+
+    document
+    .getElementById("cakeText")
+    .innerText=
+    "Yayyy! Cake Cut! 🎂💗";
+
+
+    document
+    .getElementById("progress")
+    .style.width="100%";
+
+
+    document
+    .getElementById("cakeButton")
+    .style.display="inline-block";
+
+
+    burst(15);
+
+}
+
+
+/* =========================
+   WISHES
+========================= */
+
+const wishes=[
+
+"May your smile always stay this beautiful and your days always have a little extra sparkle. ✨",
+
+"May this year bring you endless happiness, peaceful moments and beautiful memories. 🌷",
+
+"May every little dream of yours find its way to you. You deserve so much happiness. 💕",
+
+"Stay happy, loved and surrounded by people who make your heart smile. Happy Birthday! 🎀"
+
+];
+
+
+let wishIndex=0;
+
+
+function showWish(){
+
+    document
+    .getElementById("wishNumber")
+    .innerText=
+    (wishIndex+1)+" / "+wishes.length;
+
+
+    document
+    .getElementById("wishText")
+    .innerText=
+    wishes[wishIndex];
+
+
+    let dots="";
+
+
+    for(let i=0;i<wishes.length;i++){
+
+        if(i===wishIndex){
+
+            dots+=
+            '<span class="dot active"></span>';
+
+        }else{
+
+            dots+=
+            '<span class="dot"></span>';
+
+        }
+
+    }
+
+
+    document
+    .getElementById("dots")
+    .innerHTML=dots;
+
+
+    if(wishIndex===wishes.length-1){
+
+        document
+        .getElementById("wishButton")
+        .innerText=
+        "Finish & Open Surprise ✨";
+
+    }else{
+
+        document
+        .getElementById("wishButton")
+        .innerText=
+        "Next Wish 💗";
+
+    }
+
+}
+
+
+function nextWish(){
+
+    if(
+        wishIndex <
+        wishes.length-1
+    ){
+
+        wishIndex++;
+
+        showWish();
+
+        burst(5);
+
+    }else{
+
+        goTo(6);
+
+    }
+
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+function toggleTheme(){
+
+    document
+    .body
+    .classList
+    .toggle("dark");
+
+}
+
+
+/* =========================
+   HEART ANIMATION
+========================= */
+
+function burst(amount){
+
+    for(
+        let i=0;
+        i<amount;
+        i++
+    ){
+
+        let heart=
+        document.createElement("span");
+
+
+        heart.className="heart";
+
+
+        const icons=[
+            "💗",
+            "💕",
+            "✨",
+            "🎀",
+            "♡"
+        ];
+
+
+        heart.innerText=
+        icons[
+            Math.floor(
+                Math.random()*icons.length
+            )
+        ];
+
+
+        heart.style.left=
+        Math.random()*100+"vw";
+
+
+        heart.style.fontSize=
+        (14+
+        Math.random()*18)+"px";
+
+
+        heart.style.animationDuration=
+        (4+
+        Math.random()*4)+"s";
+
+
+        document
+        .body
+        .appendChild(heart);
+
+
+        setTimeout(function(){
+
+            heart.remove();
+
+        },8000);
+
+    }
+
+}
+
+
+/* =========================
+   RESTART
+========================= */
+
+function restart(){
+
+    wishIndex=0;
+
+    cakeCut=false;
+
+
+    document
+    .getElementById("cake")
+    .classList
+    .remove("cut");
+
+
+    document
+    .getElementById("progress")
+    .style.width="0%";
+
+
+    document
+    .getElementById("cakeButton")
+    .style.display="none";
+
+
+    showWish();
+
+    goTo(1);
+
+}
+
+
+/* START */
+showWish();
+
+setInterval(function(){
+
+    burst(1);
+
+},1400);
+
+</script>
+
+</body>
+</html>
